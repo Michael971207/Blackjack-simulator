@@ -1,0 +1,78 @@
+{
+  "name": "@blackjacktrainer/blackjack-simulator",
+  "version": "0.32.4",
+  "description": "Core game logic for a Blackjack basic strategy and card counting trainer",
+  "main": "dist/main.js",
+  "bin": {
+    "blackjack-simulator": "bin/cli.js"
+  },
+  "scripts": {
+    "browser": "webpack serve --open",
+    "start": "webpack --watch",
+    "test": "mocha --require @babel/register --require ts-node/register --require tsconfig-paths/register ./test/src/**/*.ts",
+    "test:types": "tsc --noEmit --project .",
+    "lint": "eslint --fix ./src ./test",
+    "build": "webpack",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhluska/blackjack-simulator.git"
+  },
+  "keywords": [
+    "blackjack",
+    "basic",
+    "strategy",
+    "trainer"
+  ],
+  "author": "BlackjackTrainer <contact@mail.blackjacktrainer.app>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhluska/blackjack-simulator/issues"
+  },
+  "homepage": "https://blackjacktrainer.app",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.5",
+    "@types/chai": "^4.2.19",
+    "@types/mocha": "^8.2.2",
+    "@types/rosie": "0.0.40",
+    "@types/sinon-chai": "^3.2.5",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.28.0",
+    "@webpack-cli/serve": "^1.5.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.9",
+    "mocha": "^8.1.2",
+    "prettier": "2.0.5",
+    "rosie": "^2.1.0",
+    "sinon": "^11.1.2",
+    "sinon-chai": "^3.7.0",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.1.0",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.3.4",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-merge": "^4.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --cache --fix"
+  }
+}
