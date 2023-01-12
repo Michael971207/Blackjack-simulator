@@ -1,14 +1,6 @@
-<p align="center">
-  <img src="https://github.com/mhluska/blackjack-simulator/raw/master/preview.gif" alt="Preview" />
-</p>
 
 # Blackjack Simulator
 
-<a href="https://github.com/mhluska/blackjack-simulator/actions"><img src="https://github.com/mhluska/blackjack-simulator/workflows/tests/badge.svg?branch=master" alt="Build Status" /></a>
-<a href="https://www.npmjs.com/package/@blackjacktrainer/blackjack-simulator"><img src="https://img.shields.io/npm/v/@blackjacktrainer/blackjack-simulator.svg" alt="Version"></a>
-<a href="https://github.com/mhluska/blackjack-simulator/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mhluska/blackjack-simulator" alt="License"></a>
-
-> Practice card counting using Hi-Lo and calculate EV for any table conditions
 
 ## Features
 
@@ -18,17 +10,6 @@
 * Runs in any JS environment (CLI, browser, React Native app etc)
 * Multi-core support in Node
 
-## Usage
-
-### Simulator mode
-
-```sh
-npm install -g @blackjacktrainer/blackjack-simulator
-```
-
-```sh
-blackjack-simulator simulate --help
-```
 
 Override the number of CPU cores used:
 
@@ -54,9 +35,6 @@ NODE_ENV=development npm run build
 ```
 
 ### Use as a library (simulator mode)
-
-```js
-import { Simulator } from '@blackjacktrainer/blackjack-simulator';
 
 // Default settings:
 const settings = {
